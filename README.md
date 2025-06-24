@@ -1,4 +1,4 @@
-# ETL Midterm Project – Ana Jane
+# ETL Midterm Project 
 
 ## 1. Project Overview
 
