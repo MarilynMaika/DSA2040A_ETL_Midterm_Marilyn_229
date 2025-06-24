@@ -10,12 +10,12 @@ The project is organized into three main phases, each handled in separate Jupyte
 
 ## 2. ETL Phases
 
-### 📘 `etl_extract.ipynb` – Extract Phase
+### 📘 `EXTRACT – etl_extract.ipynb` – Extract Phase
 - Loads the `raw_data.csv` and `incremental_data.csv` files from the `data/` folder.
 - Displays `.head()`, `.info()`, and checks for missing values and duplicates.
 - Observations are noted and raw files are saved in the appropriate directory.
 
-### 🧹 `etl_transform.ipynb` – Transform Phase
+### 🧹 `TRANSFORM – etl_transform.ipynb` – Transform Phase
 - Applies at least four meaningful transformations:
   - Removed duplicate rows
   - Handled missing values using appropriate methods (e.g., median imputation)
@@ -24,8 +24,13 @@ The project is organized into three main phases, each handled in separate Jupyte
 - Transformed datasets are saved in `transformed/` as:
   - `transformed_full.csv`
   - `transformed_incremental.csv`
+  - Images
+  ![Chart](images\Screenshot 2025-06-24 182617.png)
+  ![Chart](images\Screenshot 2025-06-24 182644.png)
+  ![Chart](images\Screenshot 2025-06-24 182657.png)
+  
 
-### 💾 `etl_load.ipynb` – Load Phase
+### 💾 `LOAD – etl_load.ipynb` – Load Phase
 - Loads the transformed CSVs into Parquet format using `pandas.to_parquet()`.
 - Files are saved to `loaded/` as:
   - `full_data.parquet`
@@ -45,7 +50,24 @@ The project is organized into three main phases, each handled in separate Jupyte
 
 ## 4. How to Run the Project
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/<your-username>/DSA2040A_ETL_Midterm_Ana_<YourIDLast3Digits>.git
-   cd DSA2040A_ETL_Midterm_Ana_<YourIDLast3Digits>
+Follow the steps below to run this ETL (Extract → Transform → Load) project on your local machine.
+
+---
+
+### 🧰 Requirements
+
+You will need the following:
+
+- Python 3.x installed
+- Jupyter Notebook or JupyterLab
+- Python libraries:
+  - `pandas`
+  - `pyarrow` (for Parquet support)
+  - `matplotlib` and `seaborn` (for optional data visualization)
+
+You can install the required libraries using:
+
+```bash
+pip install pandas pyarrow matplotlib seaborn
+
+- clone the repository to your local machine and run all the files
